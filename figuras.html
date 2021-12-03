@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figuras geometricas | Curso Practico de JavaScript</title>
+</head>
+<body>
+    <header>
+        <h1>
+            Figuras geometricas
+        </h1>
+        <p>Este es el primer taller del curso practico de JavaScript</p>
+    </header>
+
+    <section>
+        <h2>Calculo del area y perimetro</h2>
+        <form action="">
+            <h3>Calculo del area y perimetro de un cuadrado</h3>
+            <p>
+                <label for="InputCuadrado">
+                    Escribe cuanto mide cada lado de tu cuadrado
+                </label>
+                <!-- Definimos id para conectar el input con el label -->
+                <input id = 'InputCuadrado'type="number"/>
+                <!-- button por defecto es tipo submit -->
+                <!-- Con el atributo onclick llamamos la funcion de JavaScript -->
+                <button type="button" onclick="calcularPerimetroCuadrado()">
+                    Calcular el perimetro
+                </button>
+                <button type="button" onclick="calcularAreaCuadrado()">
+                    Calcular el area
+                </button>
+            </p>
+            <h3>Calculo del area y perimetro de un triangulo</h3>
+            <p>
+                <label for="InputTrianguloLado1">
+                    Escribe cuanto mide el lado 1 de tu triangulo
+                </label>
+                <!-- Definimos id para conectar el input con el label -->
+                <input id = 'InputTrianguloLado1'type="number"/><br>
+                <!-- button por defecto es tipo submit -->
+                <!-- Con el atributo onclick llamamos la funcion de JavaScript -->
+    
+                <label for="InputTrianguloLado2">
+                    Escribe cuanto mide el lado 2 de tu triangulo
+                </label>
+                <!-- Definimos id para conectar el input con el label -->
+                <input id = 'InputTrianguloLado2'type="number"/><br>
+    
+                <label for="InputTrianguloBase">
+                    Escribe cuanto mide la base de tu triangulo
+                </label>
+                <!-- Definimos id para conectar el input con el label -->
+                <input id = 'InputTrianguloBase'type="number"/><br>
+
+                <label for="InputTrianguloAltura">
+                    Escribe cuanto mide la altura de tu triangulo
+                </label>
+                <!-- Definimos id para conectar el input con el label -->
+                <input id = 'InputTrianguloAltura'type="number"/><br>
+    
+                <button type="button" onclick="calcularPerimetroTriangulo()">
+                    Calcular el perimetro
+                </button>
+                <button type="button" onclick="calcularAreaTriangulo()">
+                    Calcular el area
+                </button>
+            </p>
+            <h3>Calculo del area y perimetero de un circulo</h3>
+            <p>
+                <label for="InputCirculo">
+                    Escribe cuanto mide el radio del circulo
+                </label>
+                <!-- Definimos id para conectar el input con el label -->
+                <input id = 'InputCirculo'type="number"/>
+                <!-- button por defecto es tipo submit -->
+                <!-- Con el atributo onclick llamamos la funcion de JavaScript -->
+                <button type="button" onclick="calcularPerimetroCirculo()">
+                    Calcular el perimetro
+                </button>
+                <button type="button" onclick="calcularAreaCirculo()">
+                    Calcular el area
+                </button>
+            </p>
+            <h3>Calculo del area y perimetro de un triangulo isoceles</h3>
+            <p>
+                <label for="InputTrianguloIsoLado1">
+                    Escribe cuanto mide el lado 1 de tu triangulo
+                </label>
+                <!-- Definimos id para conectar el input con el label -->
+                <input id = 'InputTrianguloIsoLado1'type="number"/><br>
+                <!-- button por defecto es tipo submit -->
+                <!-- Con el atributo onclick llamamos la funcion de JavaScript -->
+    
+                <label for="InputTrianguloIsoLado2">
+                    Escribe cuanto mide el lado 2 de tu triangulo
+                </label>
+                <!-- Definimos id para conectar el input con el label -->
+                <input id = 'InputTrianguloIsoLado2'type="number"/><br>
+    
+                <label for="InputTrianguloIsoBase">
+                    Escribe cuanto mide la base de tu triangulo
+                </label>
+                <!-- Definimos id para conectar el input con el label -->
+                <input id = 'InputTrianguloIsoBase'type="number"/><br>
+
+                <button type="button" onclick="calcularAlturaTrianguloIso()">
+                    Calcular la altura
+                </button>
+            </p>
+
+        </form>
+    </section>
+
+    <script src="./figura2.js"></script>
+</body>
+</html>

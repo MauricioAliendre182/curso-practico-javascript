@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+    <link href="assets/favicon.ico" rel="icon">
+    <title>Utilidad de un Nuevo Cafe</title>
+</head>
+<style>
+    body{
+        font-family: 'Oswald', sans-serif;
+        margin: 2px, 2px, 2px, 2px;
+        background: #dac292;
+    }
+    .Titulo {
+        display: grid;
+        /* grid-template-columns: auto 1fr; */
+        align-items: center;
+        background-color: #e6e2d3;
+        margin-bottom: 24px;
+        border-radius: 8px;
+        padding: 0 24px;
+    }
+
+    .Titulo h1{
+        text-align: center;
+        margin: 0;
+    }
+    .formProy {
+        background-color: #e6e2d3;
+        border-radius: 8px;
+        margin: 0 15px;
+        padding: 4px;
+    }
+    .producto {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: center;
+        font-size: 13px;
+        gap: 13px;
+        margin: 8px 3px;
+    }
+    .producto input {
+        align-items: center;
+        border-radius: 2px;
+        border-color: #034f84;
+        background: cornsilk;
+    }
+
+    .precio {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: center;
+        font-size: 13px;
+        gap: 13px;
+        margin: 8px 3px;
+    }
+    .precio input {
+        align-items: center;
+        border-radius: 2px;
+        border-color: #034f84;
+        background: cornsilk;
+    }
+
+    .costos {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: center;
+        font-size: 13px;
+        gap: 13px;
+        margin: 8px 3px;
+    }
+    .costos input {
+        align-items: center;
+        border-radius: 2px;
+        border-color: #034f84;
+        background: cornsilk;
+    }
+    .gastos {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: center;
+        font-size: 13px;
+        gap: 13px;
+        margin: 8px 3px;
+    }
+    .gastos input {
+        align-items: center;
+        border-radius: 2px;
+        border-color: #034f84;
+        background: cornsilk;
+    }
+    .impuestos {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: center;
+        font-size: 13px;
+        gap: 13px;
+        margin: 8px 3px;
+    }
+    .impuestos select {
+        align-items: center;
+        border-radius: 2px;
+        border-color: #034f84;
+        background: cornsilk;
+    }
+    .calculo-boton {
+        display: grid;
+        margin: 20px 40px;
+    }
+    .boton{
+        background: #b1cbbb;
+        font-size: large;
+        font-weight: bold;
+        border-radius: 10px;
+    }
+    .calculo-resultado{
+        display: flex;
+        justify-content: center;
+        font-size: 23px;
+        font-weight: bold;
+        color: #4040a1;
+    }
+    @media (max-width: 640px) {
+    .calculadora {
+    width: 100%;
+  }
+  .formProy {
+      margin: 0 30px;
+  }
+  .producto{
+    flex-direction: column;
+    margin: 10px 30px;
+  }
+  .precio{
+    flex-direction: column;
+    margin: 10px 30px;
+  }
+  .costos{
+    flex-direction: column;
+    margin: 10px 30px;
+  }
+  .gastos{
+    flex-direction: column;
+    margin: 10px 30px;
+  }
+  .impuestos{
+    flex-direction: column;
+    margin: 10px 30px;
+  }
+}
+</style>
+<body>
+    <div class="calculadora">
+        <header class="Titulo">
+            <h1>
+                Utilidad de un nuevo negocio
+            </h1>
+            <p>Con esta calculadora usted podra ver si su negocio tiene utlidad o no</p>
+        </header>
+        <section>
+            <h2>Calcula la utilidad neta de tu negocio</h2>
+            <form class="formProy">
+                <div class="producto">
+                    <label for="InputProducto">Escribe la cantidad que se vendio tu producto estrella (Ej: Vaso de cafe)</label>
+                    <input type="number" id="InputProducto">
+                </div>
+                <div class="precio">
+                    <label for="InputPrecio">Escribe el precio al que vendiste ese producto</label>
+                    <input type="number" id='InputPrecio'>
+                </div>
+                <div class="costos">
+                    <label for="InputCosto">Escribe el costo de los materiales para realizar ese producto (Ej: vasos vacios)</label>
+                    <input type="number" id='InputCosto'>
+                </div>
+                <div class="gastos">
+                    <label for="InputGasto">Escribe los gastos operativos (Ej: sueldos, publicidad)</label>
+                    <input type="number" id="InputGasto">
+                </div>
+                <div class="impuestos">
+                    <label for="InputImpuestos">Escoge la tasa de impuestos (Ej: 13%)</label>
+                    <select name="Inpuestos" id="InputImpuestos">
+                        <option value="0" >Sin Impuestos</option>
+                        <option value="10">10% de Impuestos</option>
+                        <option value="13">13% de Impuestos</option>
+                        <option value="15">15% de Impuestos</option>
+                    </select>
+                </div>
+                <div class="calculo-boton">
+                    <button type="button" onclick="buttonUtilidadNeta()" class="boton">
+                        Calcular la utilidad neta
+                    </button>
+                </div>
+                <div class="calculo-resultado">
+                    <p id="utilidadNeta" class='resultado'></p><br>
+                </div>
+                <br>
+    
+            </form>
+        </section>
+        <script src="./proyecto.js"></script> 
+    </div>
+</body>
+</html>
